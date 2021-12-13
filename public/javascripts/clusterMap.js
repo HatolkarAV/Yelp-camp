@@ -4,7 +4,7 @@ const map = new mapboxgl.Map({
     container: 'cluster-map',
     style: 'mapbox://styles/mapbox/light-v10',
     center: [ 79.0251460360711,21.879701064440265],
-    zoom: 3
+    zoom: 5
 });
 
 map.addControl(new mapboxgl.NavigationControl());
@@ -39,7 +39,7 @@ map.on('load', () => {
             'circle-color': [
                 'step',
                 ['get', 'point_count'],
-                '#d00000',
+                '#0F90E9',
                 10,
                 '#f48c06',
                 30,
@@ -76,7 +76,7 @@ map.on('load', () => {
         filter: ['!', ['has', 'point_count']],
         paint: {
             'circle-color': '#11b4da',
-            'circle-radius': 4,
+            'circle-radius': 6,
             'circle-stroke-width': 1,
             'circle-stroke-color': '#fff'
         }
